@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    width: 100%;
+    background-color: white; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav img {
+    height: 50px; 
+}
+#slider-container{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.text{
+    font-family: 'REM', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#blue-div {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    z-index: 100;
+    width: 30%; 
+    margin-left: 20px;
+}
+
+
+#black-div {
+    position: relative;
+    z-index: 30; 
+    background-color: black;
+    width: 8%;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#svg-container {
+    flex: 1;
+    max-width: 400px; 
+}
