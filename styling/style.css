@@ -138,6 +138,7 @@ span{
     margin-bottom: 30px;
     margin-left: 20px;
     padding-left: 10px;
+    height: 30px;
 } 
 h5{
     font-size: 12px;
@@ -145,35 +146,38 @@ h5{
   
 }
 
-#sub1 {
+#sub1, #sub2, #sub3{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* margin-left: 40px; */
+    
 }
 
-#sub2{
-    display: flex;
-    flex-wrap: wrap;
-   
-}
-#sub3{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+#sub1{
+    gap: 120px;
+    margin-right: 14px;
 }
  
+#sub2{
+    margin-right: 4px;
+    gap:5rem;
+}
+
+#sub3{
+ 
+    gap:3rem;
+}
+
 .link2 {
     display: flex;
-   
     align-items: center;
     justify-content: space-evenly;
     background-color: #244ac2;
     color: white;
-   
     margin-bottom: 30px;
     margin-left: 15px;
     padding-left: 10px;
+    height: 30px;
 }
 .link3 {
     display: flex;
@@ -184,6 +188,7 @@ h5{
     margin-bottom: 30px;
     margin-left: 20px;
     padding-left: 10px;
+    height: 30px;
 }
 
 #allsubs{
