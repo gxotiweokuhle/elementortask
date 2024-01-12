@@ -1,7 +1,8 @@
-body {
+* {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 main {
@@ -19,20 +20,80 @@ nav {
 nav img {
     height: 50px; 
 }
-#slider-container{
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 
-}
+
+#slider-container {
+    position: relative;
+    width: 100%;
+    display: inline;
+    
+
+  }
+
+  #slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide{
+    min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+  }
+
+  .slide img {
+    width: 50%;
+    height: 50vh;
+   
+  }
+
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    padding: 10px;
+  }
+
+  #prev-btn {
+    left: 0;
+  }
+
+  #next-btn {
+    right: 0;
+  }
+
+  #slide-buttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slide-btn {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+
+
 
 .text{
    
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 23px;
+    font-size: 20px;
     margin-left: 40px;
  
 }
@@ -48,7 +109,7 @@ nav img {
     background-color: #244ac2;
     color: white;
     padding: 10px;
-    z-index: 100;
+    z-index: 9999;
     width: 30%; 
     margin-left: 20px;
     margin-top: 180px;
@@ -56,16 +117,19 @@ nav img {
 
 
 #black-div {
-    position: relative;
-    z-index: 30; 
+    position: absolute;
+    z-index: 1; 
     background-color: black;
     width: 8%;
+    height: 20%;
     top: 0;
     right: 0;
+    margin-top: 180px;
     margin-right: 20px;
     margin-bottom: 30px;
-  
 }
+  
+
 
 .info {
     display: flex;
@@ -137,8 +201,10 @@ span{
     color: white;
     margin-bottom: 30px;
     margin-left: 20px;
-    padding-left: 10px;
+    padding-left: 15px;
     height: 30px;
+    
+    
 } 
 h5{
     font-size: 12px;
@@ -153,20 +219,7 @@ h5{
     
 }
 
-#sub1{
-    gap: 120px;
-    margin-right: 14px;
-}
- 
-#sub2{
-    margin-right: 4px;
-    gap:5rem;
-}
 
-#sub3{
- 
-    gap:3rem;
-}
 
 .link2 {
     display: flex;
@@ -176,7 +229,7 @@ h5{
     color: white;
     margin-bottom: 30px;
     margin-left: 15px;
-    padding-left: 10px;
+    padding-left: 15px;
     height: 30px;
 }
 .link3 {
@@ -194,6 +247,428 @@ h5{
 #allsubs{
     display: flex;
     flex-direction: row;
-   
+    justify-content: center;
+    /* padding: 50px; */
 
+}
+
+#slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Set your desired maximum width */
+    margin: 0 auto;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add styling for the buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#prev-btn {
+    left: 10px;
+    color: #061c2c;
+}
+
+#next-btn {
+    right: 10px;
+    color: #061c2c;
+}
+
+@media only screen and (max-width: 300px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        position:absolute;
+        z-index: 30; 
+        background-color: black;
+        width: 28%;
+        top: 0;
+        right: 0;
+        margin-top: 150px;
+    }
+
+    #slider-container {
+        flex-direction: column;
+    }
+
+    #slider {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        margin-top: 10px;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    #svg-container img{
+        margin-left: 40px;
+    }
+
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 420px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        position:absolute;
+        z-index: 30; 
+        background-color: black;
+        width: 28%;
+        top: 0;
+        right: 0;
+        margin-top: 150px;
+    }
+
+    #slider-container {
+        flex-direction: column;
+    }
+
+    #slider {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        margin-top: 10px;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    #svg-container img{
+        margin-left: 40px;
+    }
+
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        position:absolute;
+        z-index: 30; 
+        background-color: black;
+        width: 28%;
+        top: 0;
+        right: 0;
+        margin-top: 150px;
+    }
+
+    #slider-container {
+        flex-direction: column;
+    }
+
+    #slider {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        margin-top: 10px;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    #svg-container img{
+        margin-left: 40px;
+    }
+
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media only screen and (max-width: 700px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        position:absolute;
+        z-index: 30; 
+        background-color: black;
+        width: 28%;
+        top: 0;
+        right: 0;
+        margin-top: 150px;
+    }
+
+    #slider-container {
+        flex-direction: column;
+    }
+
+    #slider {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        margin-top: 10px;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    #svg-container img{
+        margin-left: 40px;
+    }
+
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media only screen and (max-width: 850px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        position:absolute;
+        z-index: 30; 
+        background-color: black;
+        width: 28%;
+        top: 0;
+        right: 0;
+        margin-top: 150px;
+    }
+
+    #slider-container {
+        flex-direction: column;
+    }
+
+    #slider {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        margin-top: 10px;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    #svg-container img{
+        margin-left: 40px;
+    }
+
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
 }
