@@ -565,6 +565,8 @@ h5{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 10px;
+       margin-right: 10px;
     }
 
     .rec1,
@@ -641,6 +643,8 @@ h5{
         display: flex;
         flex-direction: column;
         align-items: center;
+       margin-left: 10px;
+       margin-right: 10px;
     }
 
     .rec1,
@@ -648,7 +652,7 @@ h5{
     .rec3 {
         text-align: center;
         margin-bottom: 20px;
-        width: 250px;
+        width: 4000px;
     }
 
     #allsubs {
