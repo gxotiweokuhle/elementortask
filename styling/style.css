@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
@@ -21,9 +22,6 @@ nav img {
     height: 50px; 
 }
 
-.content{
-    margin-top: 8%;
-}
 
 
 .slider-container {
@@ -71,30 +69,46 @@ nav img {
   }
 
   .dots-container {
-    position: absolute;
+    /* position: absolute;
     bottom: 10px;
     left: 0;
     transform: translateX(-50%);
     display: flex;
     gap: 5px;
     margin-left: 90%;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px; */
+    position: absolute;
+    bottom: 10px;
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex;
+
+   
 }
 
   .dot {
-    width: 10px;
+    /* width: 10px;
     height: 20px;
     background-color: white;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: pointer; */
+    background-image: url('https://visiofund.co.za/wp-content/themes/visio/images/slider-dots.svg');
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 1px;
+    margin-bottom: 0px;
 }
 
-    .dot.active {
-        background-color: black;
+    
+
+    .active{
+        opacity: 0.39;
+        transform: rotate(160deg);
     }
-
-
 
 .text{
    
@@ -117,27 +131,25 @@ nav img {
     background-color: #244ac2;
     color: white;
     padding: 10px;
-    z-index: 9999;
+    z-index: 20;
     width: 30%; 
     margin-left: 20px;
     margin-top: 180px;
 }
-/* .content{
-    display: flex;
-    flex-direction: col;
-} */
+
 
 #black-div {
     position: absolute;
-    top: 0;
+    top: 180px;
     left: 0;
     background-color: black;
-    z-index: -1;
-    width: 18%;
-    height: 50px; 
+    z-index: 20;
+    width: 100px; 
+    height: 50px;
+    margin-top: 180px;
     margin-left: 95%;
-
-    /* margin-top: 180px; */
+   
+    
 }
 
 
@@ -275,15 +287,10 @@ h5{
     }
 
     #black-div{
-      
-       /* top: 200px;
-        right: 0; */
-        width: 10px;
-        height: 20px; 
+        z-index:1;
+        width: 400px;
         margin-left: 90%;
-        z-index: -1;
-        top: 0;
-        right: 0;
+        transform: translateY(100px);
        
             
     }
@@ -307,7 +314,7 @@ h5{
     }
 
     .slider {
-        width: 90%;
+        width: 95%;
     }
 
     .info {
@@ -376,13 +383,15 @@ h5{
     }
 
     #black-div{
+        z-index:1;
+        margin-right: 30px;
+        width: 400px;
+        margin-left: 95%;
+        transform: translateY(100px);
        
        
-        z-index: -1;
-        top: 0;
-        right: 0;
-        /* margin-top: 150px;
-        margin-left: 80%; */
+       
+        
     }
     #blue-div{
         top: 200px;
@@ -404,7 +413,7 @@ h5{
     }
 
     #slider {
-        width: 100%;
+        width: 90%;
     }
 
     .carousel-btn {
@@ -469,12 +478,13 @@ h5{
 
     #black-div{
        
+        z-index:1;
+        margin-right: 30px;
+        width: 400px;
+        margin-left: 95%;
+        transform: translateY(100px);
        
-        z-index: -1;
-        top: 0;
-        right: 0;
-        /* margin-top: 150px;
-        margin-left: 80%; */
+       
     }
     #blue-div{
         top: 200px;
@@ -561,10 +571,12 @@ h5{
 
     #black-div{
        
+        z-index:1;
+        margin-right: 30px;
+        width: 400px;
+        margin-left: 95%;
+        transform: translateY(100px);
        
-        z-index: -1;
-        top: 0;
-        right: 0;
         
         
     }
@@ -640,7 +652,7 @@ h5{
 
     
 }
-@media only screen and (max-width: 850px) {
+@media (min-width: 700px) and (max-width: 800px) {
     nav {
         flex-direction: row;
         align-items: center;
