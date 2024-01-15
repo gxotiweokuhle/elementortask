@@ -1,49 +1,38 @@
 $(document).ready(function () {
-    var currentIndex = 0;
-    var totalSlides = $('.slide').length;
-
-    // Add slide buttons
-    for (var i = 0; i < totalSlides; i++) {
-        $('#slide-buttons').append('<button class="slide-btn" data-index="' + i + '"></button>');
-    }
-
-    updateSlideButtons();
-
-    $('.slide-btn').on('click', function () {
-        currentIndex = $(this).data('index');
-        updateSlider();
-        updateSlideButtons();
-    });
-
-    $('#next-btn').on('click', function () {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
+    let currentSlide = 0;
+    function showSlide(index) {
+        const slides = $('.slide');
+        const dots = $('.dot');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
         } else {
-            currentIndex = 0;
+            currentSlide = index;
         }
-        updateSlider();
-        updateSlideButtons();
-    });
-
-    $('#prev-btn').on('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalSlides - 1;
-        }
-        updateSlider();
-        updateSlideButtons();
-    });
-
-    function updateSlider() {
-        var translateValue = -currentIndex * 100 + '%';
-        $('#slider').css('transform', 'translateX(' + translateValue + ')');
+        slides.css('transform', `translateX(${-100 * currentSlide}%)`);
+        dots.removeClass('active');
+        dots.eq(currentSlide).addClass('active');
     }
-
-    function updateSlideButtons() {
-        $('.slide-btn').removeClass('active');
-        $('.slide-btn[data-index="' + currentIndex + '"]').addClass('active');
+    function changeSlide(offset) {
+        showSlide(currentSlide + offset);
     }
+    $('.arrow.prev').on('click', function () {
+        changeSlide(-1);
+    });
+    $('.arrow.next').on('click', function () {
+        changeSlide(1);
+    });
+    const dotsContainer = $('.dots-container');
+    const slides = $('.slide');
+    slides.each(function (i) {
+        const dot = $('<span class="dot"></span>');
+        dot.on('click', function () {
+            showSlide(i);
+        });
+        dotsContainer.append(dot);
+    });
+    showSlide(currentSlide);
 });
 
   
