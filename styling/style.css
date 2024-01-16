@@ -267,12 +267,11 @@ h5{
 #allsubs{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     
-
 }
 
-
+/* media queries */
 
 @media (min-width: 300px) and (max-width: 420px) {
     nav {
