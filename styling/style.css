@@ -79,10 +79,10 @@ nav img {
     margin-bottom: 30px; */
     position: absolute;
     bottom: 10px;
-    left: 80%;
+    left: 69%;
     transform: translateX(-50%);
     display: flex;
-
+    overflow: hidden;
    
 }
 
@@ -101,10 +101,8 @@ nav img {
     background-position: center;
     margin: 0 1px;
     margin-bottom: 0px;
-}
-
     
-
+}
     .active{
         opacity: 0.39;
         transform: rotate(160deg);
@@ -143,13 +141,12 @@ nav img {
     position: absolute;
     top: 180px;
     left: 0;
+    z-index: 1;
     background-color: black;
-    z-index: 20;
-    width: 100px; 
+    width: 40px; 
     height: 50px;
     margin-top: 180px;
-    margin-left: 95%;
-   
+    margin-left: 95%; 
     
 }
 
@@ -289,9 +286,9 @@ h5{
 
     #black-div{
         z-index:1;
-        width: 400px;
+        width: 20px;
         margin-left: 90%;
-        transform: translateY(100px);
+        transform: translateY(-90px);
        
             
     }
@@ -334,6 +331,7 @@ h5{
 
     .dots-container{
         margin-top: 100px;
+        
     }
     .blocks {
         display: flex;
@@ -385,13 +383,10 @@ h5{
 
     #black-div{
         z-index:1;
-        margin-right: 30px;
-        width: 400px;
+        width: 20px;
         margin-left: 95%;
-        transform: translateY(100px);
-       
-       
-       
+        transform: translateY(-90px);
+     
         
     }
     #blue-div{
@@ -404,6 +399,9 @@ h5{
         margin-top: 40px;
         
     }
+    .arrow{
+        margin-top: 50px;
+    }
     .intro{
         font-size: 14px;
         text-align: left;
@@ -415,10 +413,6 @@ h5{
 
     #slider {
         width: 90%;
-    }
-
-    .carousel-btn {
-        margin-top: 10px;
     }
 
     .info {
@@ -480,10 +474,9 @@ h5{
     #black-div{
        
         z-index:1;
-        margin-right: 30px;
-        width: 400px;
+        width: 20px;
         margin-left: 95%;
-        transform: translateY(100px);
+        transform: translateY(-90px);
        
        
     }
@@ -510,8 +503,8 @@ h5{
         width: 100%;
     }
 
-    .carousel-btn {
-        margin-top: 10px;
+    .arrow{
+        margin-top: 40px;
     }
 
     .info {
@@ -573,10 +566,9 @@ h5{
     #black-div{
        
         z-index:1;
-        margin-right: 30px;
-        width: 400px;
+        width: 20px;
         margin-left: 95%;
-        transform: translateY(100px);
+        transform: translateY(-90px);
        
         
         
@@ -664,13 +656,11 @@ h5{
     }
 
     #black-div{
-        position:absolute;
-        z-index: 30; 
-        background-color: black;
-        width: 28%;
-        top: 0;
-        right: 0;
-        margin-top: 150px;
+        z-index:1;
+        width: 20px;
+        margin-left: 95%;
+        transform: translateY(-90px);
+       
     }
 
     #slider-container {
@@ -707,6 +697,386 @@ h5{
         text-align: center;
         margin-bottom: 20px;
         width: 4000px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        z-index:1;
+        width: 20px;
+        margin-left: 90.5%;
+        transform: translateY(-90px);
+       
+            
+    }
+   
+    #blue-div{
+        top: 200px;
+        left: 0;
+        background-color: #244ac2;
+        color: white;
+        padding: 10px;
+        z-index: 9999;
+        width: 30%; 
+        margin-left: 10px;
+        margin-top: 40px;
+        
+    }
+    .slider-container {
+        flex-direction: column;
+        
+       
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    .intro{
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .arrow{
+        margin-top: 80px;
+        opacity: 0.9;
+    }
+
+    .dots-container{
+        margin-top: 100px;
+        
+    }
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        z-index:1;
+        width: 20px;
+        margin-left: 90.5%;
+        transform: translateY(-90px);
+       
+            
+    }
+   
+    #blue-div{
+        top: 200px;
+        left: 0;
+        background-color: #244ac2;
+        color: white;
+        padding: 10px;
+        z-index: 9999;
+        width: 30%; 
+        margin-left: 10px;
+        margin-top: 40px;
+        
+    }
+    .slider-container {
+        flex-direction: column;
+        
+       
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    .intro{
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .arrow{
+        margin-top: 80px;
+        opacity: 0.9;
+    }
+
+    .dots-container{
+        margin-top: 100px;
+        
+    }
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media (min-width: 1000px) and (max-width: 1245px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        z-index:1;
+        width: 20px;
+        margin-left: 90.5%;
+        transform: translateY(-90px);
+       
+            
+    }
+   
+    #blue-div{
+        top: 200px;
+        left: 0;
+        background-color: #244ac2;
+        color: white;
+        padding: 10px;
+        z-index: 9999;
+        width: 30%; 
+        margin-left: 10px;
+        margin-top: 40px;
+        
+    }
+    .slider-container {
+        flex-direction: column;
+        
+       
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    .intro{
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .arrow{
+        margin-top: 80px;
+        opacity: 0.9;
+    }
+
+    .dots-container{
+        margin-top: 100px;
+        
+    }
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    #allsubs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #subs,
+    section {
+        margin-bottom: 20px;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        text-align: center;
+        margin-bottom: 10px;
+       
+    }
+
+    
+}
+
+@media (min-width: 1245px) and (max-width: 1280px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    #black-div{
+        z-index:1;
+        width: 30px;
+        margin-left: 90.5%;
+        transform: translateY(-90px);
+       
+            
+    }
+   
+    #blue-div{
+        top: 200px;
+        left: 0;
+        background-color: #244ac2;
+        color: white;
+        padding: 10px;
+        z-index: 9999;
+        width: 30%; 
+        margin-left: 10px;
+        margin-top: 40px;
+        
+    }
+    .slider-container {
+        flex-direction: column;
+        
+       
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .info {
+        text-align: center;
+       
+    }
+    .intro{
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .arrow{
+        margin-top: 80px;
+        opacity: 0.9;
+    }
+
+    .dots-container{
+        margin-top: 100px;
+        
+    }
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rec1,
+    .rec2,
+    .rec3 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 250px;
     }
 
     #allsubs {
